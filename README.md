@@ -1,4 +1,4 @@
-# vue-slides
+# rg-vue 2.0
 
 > A Vue.js project
 
