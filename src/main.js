@@ -3,6 +3,11 @@
 import Vue from 'vue'
 import App from './base/app'
 
+/* eslint-disable-next-line */
+import { plugins } from './vendors/vendors'
+/* eslint-disable-next-line */
+import { fonts } from './vendors/fonts'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -1,14 +1,14 @@
 <template lang="pug" src="./app.pug"></template>
 
 <script>
-import HelloWorld from 'pages/home/home'
+import Home from 'pages/home/home'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home
   }
 }
 </script>
 
-<style src='./app.sass' lang='sass'></style>
+<style src='../main.sass' lang='sass'></style>

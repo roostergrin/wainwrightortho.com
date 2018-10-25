@@ -5,7 +5,7 @@ const sassLint = require('gulp-sass-lint')
 const client = {
   lint: {
     styles: {
-      input: ['src/main.sass', 'src/**/*.{scss,sass}', '!src/sass/vendors/*.{scss,sass}']
+      input: ['src/main.sass', 'src/**/*.{scss,sass}', '!src/sass/vendors/*.{scss,sass}', '!src/sass/**/**/*.{scss,sass}', '!src/sass/**/**/**/*.{scss,sass}']
     }
   },
   styles: {
