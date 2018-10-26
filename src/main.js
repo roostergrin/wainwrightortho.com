@@ -5,10 +5,10 @@ import App from './base/app'
 import router from './router'
 import store from './shared/store'
 
-/* eslint-disable-next-line */
+/* eslint-disable */
 import { vendors } from './vendors/vendors'
-/* eslint-disable-next-line */
 import { fonts } from './vendors/fonts'
+/* eslint-enable */
 
 Vue.config.productionTip = false
 
