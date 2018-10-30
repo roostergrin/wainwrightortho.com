@@ -5,11 +5,11 @@ const sassLint = require('gulp-sass-lint')
 const client = {
   lint: {
     styles: {
-      input: ['src/main.sass', 'src/**/*.{scss,sass}', '!src/sass/vendors/*.{scss,sass}', '!src/sass/**/**/*.{scss,sass}', '!src/sass/**/**/**/*.{scss,sass}']
+      input: ['src/main.sass', 'src/**/*.{scss,sass}', 'src/**/**/*.{scss,sass}', 'src/**/**/**/*.{scss,sass}', '!src/sass/vendors/*.{scss,sass}', '!src/sass/**/**/*.{scss,sass}', '!src/sass/**/**/**/*.{scss,sass}']
     }
   },
   styles: {
-    watch: ['src/main.sass', 'src/**/*.{sass,scss}']
+    watch: ['src/main.sass', 'src/**/*.{sass,scss}', 'src/**/**/*.{scss,sass}', 'src/**/**/**/*.{scss,sass}']
   }
 }
 
