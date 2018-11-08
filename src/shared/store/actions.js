@@ -26,7 +26,7 @@ const actions = {
         }
 
         const data = response.data.reduce(
-          (allData, data) => ({ ...allData, [data.slug]: data }),
+          (allData, data) => ({ ...allData, [data.slug]: {...data.acf} }),
           {}
         )
         commit(GET_PAGES, data)
