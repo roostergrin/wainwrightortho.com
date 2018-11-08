@@ -4,8 +4,12 @@
 import FormContact from 'components/form/form-contact/form-contact'
 
 export default {
-  name: 'home',
-  props: ['props'],
+  name: 'Home',
+  computed: {
+    props () {
+      return this.$store.state.pages.home
+    }
+  },
   components: {
     FormContact
   }
