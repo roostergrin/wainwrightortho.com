@@ -1,4 +1,5 @@
 .pages-home 
   h1 Hello World
   FormContact
-  Icon.pages-home__icon(name='phone')
+  div(v-if='props')
+    pre {{ props }}
