@@ -36,3 +36,9 @@ add_action( 'save_post', function( $post_id ) {
     WP_REST_Cache::empty_cache();
   }
 });
+
+// disable new wp 5 code editor for posts
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
+// disable new wp 5 code editor for post types
+add_filter('use_block_editor_for_post_type', '__return_false', 10);
