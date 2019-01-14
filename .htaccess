@@ -61,13 +61,6 @@ deny from all
 satisfy all
 </files>
 
-# Block WordPress xmlrpc.php requests
-<Files xmlrpc.php>
-order deny,allow
-deny from all
-allow from 69.181.69.121
-</Files>
-
 <files wp-config.php>
 order allow,deny
 deny from all
