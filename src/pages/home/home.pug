@@ -1,4 +1,2 @@
-.pages-home 
-  h1 Hello World
-  FormContact
-  pre {{ props }}
+.pages-home(v-if='props')
+  h1 {{props.title}}
