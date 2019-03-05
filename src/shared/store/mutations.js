@@ -1,9 +1,9 @@
-import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT } from './mutation-types.js'
+import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT, LOADING } from './mutation-types.js'
 
 const mutations = {
   [GET_PAGES] (state, data) {
     state.pages = data
-    state.loading = false
+    state.loading = false // comment out when adding loader
   },
   // [GET_BLOG] (state, data) {
   //   state.blog = data
@@ -28,6 +28,9 @@ const mutations = {
   },
   [VIEW_MODALCONTENT] (state, data) {
     state.modalContent = data
+  },
+  [LOADING] (state, data) {
+    state.loading = data
   }
 }
 
