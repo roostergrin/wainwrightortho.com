@@ -1,0 +1,25 @@
+.button
+  &--main
+    display: block
+    transition: all .25s cubic-bezier(0, 0, 0.2, 1)
+    // box-shadow: $shadow-btn
+    // background: $yellow
+    cursor: pointer
+    padding: rem-calc(21) rem-calc(40)
+    max-width: 200px
+    text-align: center
+    text-transform: uppercase
+    letter-spacing: 1.267px
+    // color: $hero-black
+    font-size: 15px
+    font-weight: 900
+
+    @media (hover: hover)
+      &:hover
+        transform: translateY(1px)
+        // box-shadow: none
+        // background: darken($yellow, 12%)
+
+    // @media screen and (max-width: 360px)
+    //   padding: rem-calc(12) rem-calc(8)
+    //   font-size: 12px
