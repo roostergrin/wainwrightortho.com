@@ -1,2 +1,6 @@
 .pages-home(v-if='props')
-  h1 {{props.title}}
+  full-page#fullpage(:options='fullpageOptions', ref='home')
+    .pages-home__section
+      Hero
+    .pages-home__section
+      Welcome    
