@@ -1,34 +1,30 @@
-.hero-text
-  // font-family: $font
-  font-size: 48px
-  font-weight: 700
+*
+  box-sizing: border-box
+
+body
+  @include desktop-lg
+    font-size: 18px
+  margin: 0
+  text-rendering: optimizeLegibility
+  line-height: 1.13
+  color: $hero-white
+  font-family: $kannada
+  font-size: 16px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 h1
-  line-height: 1.25
-  // font-family: $font
+  line-height: 1.61
+  font-family: $montserrat
   font-size: 36px
 
 h2
-  line-height: 1.25
-  letter-spacing: 2.8px
-  // font-family: $font
-  font-size: 22px
+  @extend h1
+  font-weight: 700
 
 h3
   line-height: 1.12
-  // font-family: $font
-  font-size: 22px
-  font-weight: 700
-
-h4
-  line-height: 1.12
-  // font-family: $font
   font-size: 18px
-
-body
-  line-height: 1.12
-  font-family: $kannada
-  font-size: 16px
 
 a
   text-decoration: none
@@ -36,14 +32,3 @@ a
 
 p
   margin: 0
-  line-height: 1.12
-  // font-family: $font
-  font-size: 16px
-
-.p2
-  // font-family: $font
-  font-size: 15px
-
-.p3
-  // font-family: $font
-  font-size: 12px
