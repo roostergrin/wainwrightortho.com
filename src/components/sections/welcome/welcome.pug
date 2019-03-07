@@ -1,0 +1,8 @@
+.welcome
+  .welcome__bg
+  .welcome__image(:style="{ backgroundImage: 'url(' + props.image + ')' }")
+    img.sr-only(:src='props.image', :alt='props.name')
+  .welcome__container
+    .welcome__col
+      .welcome__name(v-html='props.name')
+      .welcome__bio(v-html='props.bio')    

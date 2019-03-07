@@ -1,0 +1,29 @@
+.welcome
+  position: relative
+  background-color: $slate-blue
+  height: 100%
+
+  &__container
+    @extend .container
+    align-items: center
+    height: 100%
+
+  &__image
+    @extend .image
+    @extend .image--animation
+    background-position: top
+    max-width: 44%
+
+  &__col
+    @extend .col-6
+    @extend .col-6--offset
+
+  &__name
+    @extend h1
+    @extend .text-fade-in
+    margin-bottom: 2rem
+    transition-delay: .5s
+
+  &__bio
+    @extend .text-fade-in
+    transition-delay: .65s
