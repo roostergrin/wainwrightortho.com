@@ -9,7 +9,8 @@ import {
   VIEW_TYPES,
   VIEW_SHOWMODAL,
   VIEW_MODALCONTENT,
-  LOADING
+  LOADING,
+  IS_MOBILE
 } from './mutation-types'
 
 const actions = {
@@ -75,6 +76,9 @@ const actions = {
   },
   LOADING ({ commit }, data) {
     commit(LOADING, data)
+  },
+  IS_MOBILE ({ commit }, data) {
+    commit(IS_MOBILE, data)
   }
 }
 

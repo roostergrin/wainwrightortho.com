@@ -14,6 +14,11 @@ export default {
     this.$store.dispatch('VIEW_SHOWMODAL', false)
     this.$store.dispatch('VIEW_MODALCONTENT', false)
   },
+  async mounted () {
+    if ((typeof window.orientation !== 'undefined') || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+      this.$store.dispatch('IS_MOBILE', true)
+    }
+  },
   components: {
     Menu,
     Navigation

@@ -1,4 +1,4 @@
-import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT, LOADING } from './mutation-types.js'
+import { GET_PAGES, GET_APP, VIEW_NAV, VIEW_BODY, VIEW_TYPES, VIEW_SHOWMODAL, VIEW_MODALCONTENT, LOADING, IS_MOBILE } from './mutation-types.js'
 
 const mutations = {
   [GET_PAGES] (state, data) {
@@ -31,6 +31,9 @@ const mutations = {
   },
   [LOADING] (state, data) {
     state.loading = data
+  },
+  [IS_MOBILE] (state, data) {
+    state.mobile = data
   }
 }
 
