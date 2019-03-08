@@ -1,6 +1,6 @@
 #app 
   Navigation
-  router-view
+  router-view(:class="{ 'is-mobile': $store.state.mobile }")
   transition(name='fade')
     Menu(v-if='$store.state.nav') 
   
