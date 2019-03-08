@@ -5,4 +5,6 @@
       span
       span
       span
-    .navigation__appt-btn Schedule A Complimentary Consultation
+    .navigation__appt-btn 
+      span(v-if='!$store.state.mobile') Schedule A Complimentary Consultation
+      span(v-if='$store.state.mobile') Free Consultation
