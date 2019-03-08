@@ -1,6 +1,7 @@
 <template lang="pug" src="./app.pug"></template>
 
 <script>
+import Menu from 'components/menu/menu'
 import Navigation from 'components/navigation/navigation'
 
 export default {
@@ -14,6 +15,7 @@ export default {
     this.$store.dispatch('VIEW_MODALCONTENT', false)
   },
   components: {
+    Menu,
     Navigation
   }
 }

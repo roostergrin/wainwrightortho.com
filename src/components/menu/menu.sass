@@ -1,0 +1,61 @@
+.menu
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 98
+  background: linear-gradient(to bottom, #043c5e, #0d1d2b)
+  width: 100%
+  height: 100vh
+
+  &__container
+    @extend .container
+    margin-top: 5%
+    height: 70%
+    min-height: 455px
+
+  &__logo
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1
+    width: rem-calc(240)
+
+  &__col
+    padding: rem-calc(180) 2rem 0
+
+    &--right
+      @extend .col-5
+
+    &--left
+      @extend .col-6
+      border-right: 1px solid $grey
+      text-align: right
+
+  &__links
+    display: inline-block
+    text-align: right
+
+  &__link
+    @extend h1
+    transition: color .2s ease
+    cursor: pointer
+
+    &:hover
+      color: $grey
+
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: rem-calc(18)
+
+  &__location
+    width: 49%
+    font-size: 14px
+
+    &:nth-child(n+3)
+      margin-top: 2rem
+
+  &__city
+    font-weight: 700

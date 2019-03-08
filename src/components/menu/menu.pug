@@ -1,0 +1,12 @@
+.menu
+  .menu__container
+    Icon.menu__logo(name='Logo')
+    .menu__col.menu__col--left
+      .menu__links
+        .menu__link(v-for='link, i in props.links', :key='i' @click='handleRoute(i)' v-html='link.link')
+    .menu__col.menu__col--right
+      .menu__content
+        .menu__location(v-for='location, i in props.locations', :key='i')
+          .menu__city(v-html='location.city')
+          a.menu__address(v-html='location.address', :href='location.location_href' target='_blank' rel='noopener noreferrer')
+          a.menu__phone(v-html='location.phone', :href='location.phone_href')    
