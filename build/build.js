@@ -34,7 +34,7 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
 
     console.log(chalk.cyan('  🙌 Build complete.\n'))
     console.log(chalk.yellow(
-      `  This is Neo. I'm stuck in the Matrix... \n`
+      `  Follow the white rabbit... \n`
     ))
   })
 })
