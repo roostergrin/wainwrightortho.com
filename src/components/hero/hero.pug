@@ -1,4 +1,4 @@
-.hero
+.hero(:class="{ 'hero--mobile': $store.state.mobile }")
   .hero__overlay
   Icon.hero__logo(name='Logo')  
   video.hero__video(:src='props.video' loop muted autoplay playsinline ref='video' data-keepplaying)

@@ -11,8 +11,9 @@ export default {
     return {
       fullpageOptions: {
         licenseKey: config.fullpage.KEY,
-        anchors: ['hero-section', 'welcome-section'],
+        // anchors: ['hero-section', 'welcome-section'],
         easingcss3: 'cubic-bezier(.52, .01, .16, 1)',
+        // responsiveHeight: 600,
         responsiveWidth: 769,
         scrollingSpeed: 800,
         sectionSelector: '.pages-home__section'
