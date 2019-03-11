@@ -22,6 +22,11 @@ const router = new VueRouter({
       name: 'Styleguide',
       navigation: false,
       component: Styleguide
+    },
+    {
+      path: '/*',
+      navigation: false,
+      component: Home
     }
   ],
   scrollBehavior
