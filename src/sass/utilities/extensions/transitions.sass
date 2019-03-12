@@ -17,16 +17,32 @@
 
   &-enter-active
     transition-property: opacity
-    transition-duration: .55s
-    transition-timing-function: ease-in-out
+    transition-duration: .4s
+    transition-timing-function: ease-in
+    transition-delay: .75s
 
   &-leave-active
-    transition-delay: .1s
     transition-property: opacity
-    transition-duration: .45s
+    transition-duration: .2s
+    transition-timing-function: ease
 
   &-enter,
   &-leave-active
+    transform: translateX(3rem)
+    opacity: 0
+
+.treatments__image-crossfade
+  backface-visibility: hidden
+
+  &-enter-active
+    transition: opacity .5s ease-in .55s, transform .7s ease .4s
+
+  &-leave-active
+    transition: opacity .45s ease-in, transform .55s ease
+
+  &-enter,
+  &-leave-active
+    // transform: translateX(-30%)
     opacity: 0
 
 // -------------------------------------

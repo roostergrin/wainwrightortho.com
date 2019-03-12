@@ -2,6 +2,7 @@
 
 <script>
 import Hero from 'components/hero/hero'
+import Treatments from 'section/treatments/treatments'
 import Welcome from 'section/welcome/welcome'
 
 import config from '../../config'
@@ -14,6 +15,7 @@ export default {
         // anchors: ['hero-section', 'welcome-section'],
         easingcss3: 'cubic-bezier(.52, .01, .16, 1)',
         // responsiveHeight: 600,
+        onLeave: this.onLeave,
         responsiveWidth: 769,
         scrollingSpeed: 800,
         sectionSelector: '.pages-home__section'
@@ -28,7 +30,17 @@ export default {
   },
   components: {
     Hero,
+    Treatments,
     Welcome
+  },
+  methods: {
+    onLeave (origin, destination, direction) {
+      if (destination.index === 2) {
+        setTimeout(() => { destination.item.classList.add('sliding') }, 355)
+      } else {
+        origin.item.classList.remove('sliding')
+      }
+    }
   }
 }
 </script>

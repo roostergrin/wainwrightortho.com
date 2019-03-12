@@ -1,0 +1,16 @@
+.treatments
+  .treatments__container
+    .treatments__title(v-html='props.title')
+    .treatments__image-container
+      transition-group(name='treatments__image-crossfade' tag='div')
+        .treatments__image(v-for='image, j in props.images', :key="'image' + j", :style="{ backgroundImage: 'url(' + image.image + ')' }" v-if='activeSlide === j')
+          img.sr-only(:src='image.image', :alt='image.alt')
+    transition-group(name='crossfade' tag='div')  
+      .treatments__slide(v-for='slide, i in props.slides', :key='"slide" + i' v-if='activeSlide === i')
+        .treatments__right
+          .treatments__content
+            .treatments__name(v-html='slide.name')
+            .treatments__text(v-html='slide.text')
+          Icon.treatments__arrow.treatments__arrow--left(name='ArrowLft' @click.native='moveDown')
+          Icon.treatments__arrow.treatments__arrow--right(name='ArrowRt' @click.native='moveUp')  
+  .treatments__mask        
