@@ -2,6 +2,10 @@
   background-image: radial-gradient(circle at 50% 55%, #526f87, $slate-blue)
   height: 100%
 
+  .is-mobile &
+    height: 60vh
+    overflow: hidden
+
   &__title
     @extend h1
     transform: translateX(-3rem)
@@ -9,7 +13,8 @@
     opacity: 0
     padding-top: rem-calc(64)
 
-    .active &
+    .active &,
+    .is-mobile &
       transform: translateX(0)
       opacity: 1
 
@@ -50,7 +55,8 @@
     width: 65%
     height: 100%
 
-    .active &
+    .active &,
+    .is-mobile &
       transform: translateX(0)
 
     .sliding &
@@ -113,6 +119,8 @@
 
   &__name
     @extend h1
+    @include phone
+      font-size: 28px 
     margin-bottom: 1rem
 
   &__arrow
