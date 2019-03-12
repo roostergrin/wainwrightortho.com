@@ -1,0 +1,29 @@
+.patients
+  .patients__overlay
+  video.patients__video(:data-src='props.video' type='video/mp4' loop muted autoplay playsinline data-keepplaying ref='patients-video')
+  
+  .patients__upper
+    .patients__container
+      .patients__upper-content
+        .patients__upper-title(v-html='props.testimonials_title')
+        .patients__slider
+          Icon.patients__quote.patients__quote--left(name='QuoteLft')
+          Icon.patients__quote.patients__quote--right(name='QuoteRt')  
+          transition(name='fade')
+            .patients__slide(v-for='slide, i in props.testimonials', :key='i' v-if='i === show')
+              .patients__testimonial(v-html='slide.text')
+              .patients__author(v-html='slide.author')
+              
+  .patients__lower
+    //- .patients__lower-bg
+    .patients__lower-content  
+      .patients__lower-title(v-html='props.get_started_title')  
+      .patients__container.patients__container--lower
+        .patients__item(v-for='item, j in props.buttons', :key='j' @click='handleClick', :style="{ transitionDelay: (( j * .15) + .7) + 's'}")
+          Icon.patients__icon(:name='item.icon')
+          .patients__label(v-html='item.label')     
+          .patients__text(v-html='item.text')           
+          
+      
+        
+    

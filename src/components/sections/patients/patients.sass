@@ -1,0 +1,152 @@
+.patients
+  height: 100%
+
+  &__video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+    @supports (object-fit: cover)
+      height: 100%
+      object-fit: cover
+
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    background: $overlay-dark-blue
+    width: 100%
+    height: 100%
+
+  &__upper,
+  &__lower
+    position: relative
+    z-index: 2
+
+  &__upper
+    height: 60%
+
+  &__lower
+    position: absolute
+    top: 55%
+    left: 0
+    transform: translateY(100%)
+    transition: transform .4s cubic-bezier(.39, .575, .28, .995) .45s
+    background: rgba($deep-grey, .57)
+    width: 100%
+    height: 45%
+
+    .active &
+      transform: translateY(0)
+
+  &__container
+    @extend .container
+    align-items: center
+    height: 100%
+
+    &--lower
+      @include tablet
+        flex-direction: row
+      justify-content: center
+
+  &__upper-content
+    @extend .col-5
+    @extend .col-6--offset
+    transition: opacity .4s ease-in .65s
+    opacity: 0
+
+    .active &
+      opacity: 1
+
+    @media screen and (max-height: 620px)
+      margin-left: calc((3/12) * 100%)
+
+  &__slider
+    position: relative
+    height: rem-calc(208)
+
+    @media screen and (max-height: 620px)
+      height: rem-calc(120)
+
+  &__slide
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 0 4rem
+    width: 100%
+
+    @media screen and (max-height: 620px)
+      padding: 0 1rem
+
+  &__quote
+    position: absolute
+    width: rem-calc(112)
+    height: rem-calc(82)
+
+    &--left
+      top: 0
+      left: 0
+
+    &--right
+      right: 0
+      bottom: 0
+
+  &__author
+    padding-right: 5rem
+    text-align: right
+
+  &__upper-title
+    @extend h1
+    margin-bottom: rem-calc(-14)
+    padding-left: 4rem
+
+  &__lower-title
+    @extend h1
+    transition: opacity .35s ease-in .6s
+    opacity: 0
+    margin-bottom: 3rem
+    text-align: center
+
+    .active &
+      opacity: 1
+
+    @media screen and (max-height: 620px)
+      position: absolute
+      padding-left: 2rem
+
+  &__lower-content
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+
+  &__item
+    @include desktop-lg
+      max-width: 200px
+    transition: opacity .35s ease-in
+    opacity: 0
+    margin: 0 2rem
+    width: 33%
+    max-width: 190px
+
+    .active &
+      opacity: 1
+
+  &__icon
+    margin: 0 auto
+    width: rem-calc(75)
+    height: rem-calc(75)
+
+    @media screen and (max-height: 620px)
+      width: rem-calc(45)
+      height: rem-calc(45)
+
+  &__label
+    margin: 1.5rem 0 rem-calc(14)
+    font-weight: bold

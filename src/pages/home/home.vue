@@ -1,7 +1,10 @@
 <template lang="pug" src="./home.pug"></template>
 
 <script>
+import Contact from 'section/contact/contact'
 import Hero from 'components/hero/hero'
+import Patients from 'section/patients/patients'
+import Team from 'section/team/team'
 import Treatments from 'section/treatments/treatments'
 import Welcome from 'section/welcome/welcome'
 
@@ -29,7 +32,10 @@ export default {
     }
   },
   components: {
+    Contact,
     Hero,
+    Patients,
+    Team,
     Treatments,
     Welcome
   },
