@@ -1,5 +1,5 @@
 .hero(:class="{ 'hero--mobile': $store.state.mobile }")
   .hero__overlay
   Icon.hero__logo(name='Logo')  
-  video.hero__video(:src='props.video' loop muted autoplay playsinline ref='video' data-keepplaying)
+  video.hero__video(:src='props.video' type='video/mp4' loop muted autoplay playsinline ref='video' data-keepplaying)
     | Your browser does not support video.
