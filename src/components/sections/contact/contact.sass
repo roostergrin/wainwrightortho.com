@@ -47,6 +47,11 @@
     display: none !important
 
   &__form-container
+    @include tablet
+      top: calc(63% - 80px)
+    @include phone
+      top: calc(74.5% - 80px)
+      max-width: 100%
     position: absolute
     top: calc(65% - 60px)
     right: 0
@@ -59,10 +64,32 @@
     overflow: hidden
 
     &--active
+      @include tablet
+        top: calc(60% - 354px)
+        background: rgba($white, .48)
+        height: 354px
+      @include phone
+        top: 0
+        background: $blue
+        height: 100vh
+
       top: calc(65% - 380px)
+      transform: translateX(100%)
       padding: 2rem
       max-width: 612px
       height: 380px
+
+    .active &
+      animation: slide-out .35s ease .35s forwards
+
+      @keyframes slide-out
+        0%
+          transform: translateX(100%)
+          opacity: 0
+        10%
+          opacity: 1
+        100%
+          transform: translateX(0)
 
   &__form-title
     // display: flex
@@ -82,7 +109,7 @@
   &__arrow
     display: inline-block
     transition: opacity .2s ease-in
-    margin-left: rem-calc(10)
+    margin-left: rem-calc(14)
     width: 2rem
     height: rem-calc(46)
     vertical-align: bottom
