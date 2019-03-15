@@ -66,6 +66,9 @@ export default {
   methods: {
     toggleForm () {
       this.formActive = !this.formActive
+    },
+    closeForm () {
+      this.formActive = false
     }
   }
 }

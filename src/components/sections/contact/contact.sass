@@ -81,6 +81,7 @@
 
     .active &
       animation: slide-out .35s ease .35s forwards
+      opacity: 0
 
       @keyframes slide-out
         0%
@@ -90,6 +91,7 @@
           opacity: 1
         100%
           transform: translateX(0)
+          opacity: 1
 
   &__form-title
     // display: flex
@@ -117,6 +119,30 @@
 
     .contact__form-container--active &
       opacity: 0
+
+  &__form-close-btn
+    position: absolute
+    top: 2rem
+    right: 2rem
+    cursor: pointer
+    width: rem-calc(22)
+    height: rem-calc(22)
+
+    span
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      transition: background .2s ease
+      background: $hero-white
+      width: rem-calc(22)
+      height: 2px
+
+      &:first-child
+        transform: rotate(45deg)
+
+      &:last-child
+        transform: rotate(-45deg)
 
   &__lower
     @include tablet

@@ -2,6 +2,9 @@
   .contact__overlay
   .contact__map(ref='map')
   .contact__form-container(:class="{ 'contact__form-container--active': formActive }")
+    .contact__form-close-btn(v-if='formActive' @click='closeForm')
+      span
+      span
     .contact__form-title(@click='toggleForm')
       span Contact Us
       Icon.contact__arrow(name='ContactArrow')
