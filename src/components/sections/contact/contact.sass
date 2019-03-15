@@ -65,22 +65,28 @@
       height: 380px
 
   &__form-title
-    display: flex
-    align-items: center
-    justify-content: center
-    margin-bottom: rem-calc(12)
+    // display: flex
+    // align-items: center
+    // justify-content: center
+    display: inline-block
+    padding: rem-calc(2) rem-calc(8)
+    // margin-bottom: rem-calc(12)
 
     span
       @extend h1
 
     .contact__form-container--active &
-      justify-content: flex-start
+      // justify-content: flex-start
+      padding: 0
 
   &__arrow
+    display: inline-block
     transition: opacity .2s ease-in
     margin-left: rem-calc(10)
     width: 2rem
-    height: rem-calc(36)
+    height: rem-calc(46)
+    vertical-align: bottom
+    // line-height: 1.61
 
     .contact__form-container--active &
       opacity: 0
