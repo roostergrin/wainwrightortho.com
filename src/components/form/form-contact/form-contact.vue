@@ -18,13 +18,26 @@ export default {
   methods: {
     validate () {
       this.$validator.validateAll()
+        .then(res => {
+          if (res) {
+            this.onSubmit()
+          }
+        })
+        .catch(e => { console.log(e) })
+    },
+    onSubmit () {
+      this.formSubmitted = true
       axios.post(this.postUrl, {
         fullname: this.fullname,
         phone: this.phone,
         email: this.email,
         message: this.message
       })
-        .then(res => { console.log(res) })
+        .then(res => {
+          this.active = ''
+          this.formSuccess = true
+          this.formSubmitted = false
+        })
         .catch(e => { console.log(e) })
     }
   }

@@ -1,0 +1,50 @@
+.form-contact
+
+  &__container
+    display: flex
+    justify-content: space-between
+
+  &__col
+    width: 45%
+
+  &__input
+    border-bottom: 2px solid $hero-white
+    background: transparent
+    width: 100%
+    height: 40px
+    line-height: 1.2
+
+    &::placeholder
+      color: $hero-white
+
+    &--textarea
+      border: 2px solid $hero-white
+      height: auto
+
+  &__label
+    display: block
+    height: 40px
+    line-height: 2.6
+
+  &__message
+    height: 20px
+
+  &__button-group
+    margin-top: rem-calc(12)
+    text-align: right
+
+  &__submit-button
+    transition: all .2s ease
+    border: 2px solid $hero-white
+    border-radius: 8px
+    background-color: transparent
+    cursor: pointer
+    padding: rem-calc(4) 1.5rem
+    color: $hero-white
+    font-family: $montserrat
+
+    &:hover
+      transform: translateY(-1px)
+      box-shadow: $shadow-btn
+      background-color: $hero-white
+      color: $slate-blue
