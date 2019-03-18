@@ -1,10 +1,102 @@
 .team
-  background-color: honeydew
   height: 100%
 
-  h1
+  &__wrapper
+    display: flex
+    flex-direction: column
+    background: radial-gradient(circle at 50% 55%, rgba($slate-blue, .18), #526f87)
+    height: 100%
+
+  &__upper
+    height: 80%
+    overflow: hidden
+
+  &__lower
+    display: flex
+    justify-content: space-between
+    background: $blue
+    height: 20%
+
+  &__title
+    @extend h1
+    @include desktop-lg
+      left: 15%
     position: absolute
-    top: 50%
+    top: 80px
+    left: 7.5%
+
+  &__container
+    position: relative
+    margin: 0 auto
+    max-width: 768px
+    height: 100%
+
+  &__row
+    display: flex
+    position: absolute
+    bottom: 0
     left: 50%
-    transform: translate(-50%, -50%)
-    color: $deep-grey 
+    transform: translateX(-50%)
+    margin-left: -1rem
+
+  &__member
+    transition: filter .2s ease
+    margin-right: -1.9rem
+    cursor: pointer
+    width: auto
+    height: 450px
+    filter: grayscale(.8)
+
+    &--active
+      filter: none
+
+    .team__row--rear &
+      height: 520px
+
+  &__content
+    position: absolute
+    bottom: 3rem
+    z-index: 99
+    background: rgba($black, .7)
+    padding: 2rem
+    max-width: 475px
+    height: 206px
+
+    &--left
+      left: -3rem
+
+    &--right
+      right: -3rem
+
+    &--center
+      left: 50%
+      transform: translateX(-50%)
+
+    &--hide
+      display: none
+
+  &__name
+    @extend h1
+    margin-bottom: rem-calc(10)
+    line-height: 1
+
+  &__position
+    font-size: 20px
+
+  &__location
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    transition: color .2s ease
+    width: 100%
+
+    &:hover,
+    &--selected
+      color: $white
+
+  &__bg
+    @extend .image
+
+  &__city
+    @extend h1
