@@ -3,6 +3,8 @@
     height: 65vh
   @include tablet
     height: 90vh
+  @include phone
+    height: 80vh
   height: 100%
 
   &__wrapper
@@ -25,6 +27,8 @@
     @extend h1
     @include desktop-lg
       left: 15%
+    @include phone
+      top: 1rem
     position: absolute
     top: 80px
     left: 7.5%
@@ -55,10 +59,16 @@
         .team__member
           &:nth-child(2)
             margin-left: -1rem
+            @media screen and (max-width: 767px)
+              margin-left: -.2rem
           &:nth-child(3)
             margin-left: -1.4rem
+            @media screen and (max-width: 767px)
+              margin-left: -.6rem
           &:nth-child(4)
             margin-left: -1.9rem
+            @media screen and (max-width: 767px)
+              margin-left: -1.1rem
 
       &:nth-child(2)
         .team__member
@@ -69,6 +79,14 @@
 
       @media screen and (max-height: 716px)
         bottom: -6rem
+
+      @media screen and (max-width: 767px)
+        bottom: 180px
+        margin-left: 0
+
+    @media screen and (max-width: 767px)
+      bottom: 180px
+      margin-left: -.5rem
 
   &__member
     // position: absolute
@@ -89,6 +107,13 @@
       // margin-left: -1rem
       height: 567px
 
+      @media screen and (max-width: 767px)
+        height: calc(100vw * .738)
+
+    @media screen and (max-width: 767px)
+      margin-right: -1rem
+      height: calc(100vw * .586)
+
   &__content
     position: absolute
     bottom: 3rem
@@ -99,9 +124,17 @@
     height: 206px
 
     &--left
+      @include tablet
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
       left: -3rem
 
     &--right
+      @include tablet
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
       right: -3rem
 
     &--center
@@ -114,6 +147,10 @@
 
     @media screen and (max-height: 716px)
       bottom: 1rem
+
+    @media screen and (max-width: 767px)
+      bottom: 0
+      background: $blue
 
   &__name
     @extend h1
