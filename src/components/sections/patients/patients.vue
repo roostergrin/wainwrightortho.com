@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     handleClick () {
-      console.log('clickevent')
+      console.log('modal')
     }
   }
 }

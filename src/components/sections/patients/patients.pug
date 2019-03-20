@@ -19,10 +19,14 @@
     .patients__lower-content  
       .patients__lower-title(v-html='props.get_started_title')  
       .patients__container.patients__container--lower
-        .patients__item(v-for='item, j in props.buttons', :key='j' @click='handleClick', :style="{ transitionDelay: (( j * .15) + .7) + 's'}")
+        a.patients__item(v-for='item, j in props.buttons', :key='j', v-if="item.href", :style="{ transitionDelay: (( j * .15) + .7) + 's'}", :href='item.href' target='_blank' rel='noopener noreferrer')
           Icon.patients__icon(:name='item.icon')
           .patients__label(v-html='item.label')     
-          .patients__text(v-html='item.text')           
+          .patients__text(v-html='item.text')
+        .patients__item(v-for='item, j in props.buttons', :key='j', v-if="!item.href" @click='handleClick', :style="{ transitionDelay: (( j * .15) + .7) + 's'}", :href='item.href' target='_blank' rel='noopener noreferrer')
+          Icon.patients__icon(:name='item.icon')
+          .patients__label(v-html='item.label')     
+          .patients__text(v-html='item.text')                
           
       
         
