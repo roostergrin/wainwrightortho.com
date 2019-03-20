@@ -104,7 +104,8 @@
     opacity: 0
     z-index: 3
 
-    .active &
+    .active &,
+    .is-mobile &
       opacity: 1
 
     @media screen and (max-width: 1233px)
@@ -120,7 +121,7 @@
   &__name
     @extend h1
     @include phone
-      font-size: 28px 
+      font-size: 28px
     margin-bottom: 1rem
 
   &__arrow
