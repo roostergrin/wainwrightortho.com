@@ -7,7 +7,7 @@
   &__navbar
     @extend .container-large
     @include phone
-      padding-top: 1rem 
+      padding-top: 1rem
     align-items: center
     justify-content: space-between
     padding-top: 2rem
@@ -29,3 +29,6 @@
       box-shadow: $shadow-btn
       background-color: $hero-white
       color: $slate-blue
+
+    .is-mobile &
+      background: rgba($hero-white, .28) 
