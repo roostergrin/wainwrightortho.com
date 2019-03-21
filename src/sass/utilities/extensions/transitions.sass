@@ -17,18 +17,17 @@
 
   &-enter-active
     transition-property: opacity
-    transition-duration: .4s
+    transition-duration: .35s
     transition-timing-function: ease-in
-    transition-delay: .75s
 
   &-leave-active
     transition-property: opacity
-    transition-duration: .2s
-    transition-timing-function: ease
+    transition-duration: .25s
+    transition-timing-function: ease-in
+    transition-delay: .1s
 
   &-enter,
-  &-leave-active
-    transform: translateX(3rem)
+  &-leave-to
     opacity: 0
 
 .treatments__image-crossfade

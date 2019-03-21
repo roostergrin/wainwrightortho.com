@@ -93,8 +93,11 @@
         bottom: -4.6rem
 
       @media screen and (max-width: 767px)
-        bottom: 110px
-        margin-left: 0
+        bottom: 110px !important
+        margin-left: 0 !important
+
+      @media screen and (max-width: 400px) and (min-height: 700px)
+        bottom: 180px !important
 
     @media screen and (max-width: 767px)
       bottom: 180px
@@ -155,6 +158,8 @@
       width: 100%
 
     &--hide
+      @include phone
+        display: block
       display: none
 
     @media screen and (max-height: 716px)
