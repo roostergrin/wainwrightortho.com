@@ -2,6 +2,7 @@
 
 <script>
 import Menu from 'components/menu/menu'
+import Modal from 'components/modal/modal'
 import Navigation from 'components/navigation/navigation'
 
 export default {
@@ -21,6 +22,7 @@ export default {
   },
   components: {
     Menu,
+    Modal,
     Navigation
   }
 }

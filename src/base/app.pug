@@ -2,5 +2,7 @@
   Navigation
   router-view(:class="{ 'is-mobile': $store.state.mobile }")
   transition(name='fade')
-    Menu(v-if='$store.state.nav') 
+    Menu(v-if='$store.state.nav')
+  transition(name='fade')
+    Modal(v-if='$store.state.showModal')    
   
