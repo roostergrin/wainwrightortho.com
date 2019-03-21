@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     handleClick () {
-      console.log('modal')
+      this.$store.dispatch('VIEW_SHOWMODAL', true)
     }
   }
 }

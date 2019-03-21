@@ -148,12 +148,13 @@
     @include desktop-lg
       max-width: 200px
     @include tablet
-      width: 50%
       margin: 0
+      width: 50%
       // max-width: 200px
     transition: opacity .35s ease-in
     opacity: 0
     margin: 0 2rem
+    cursor: pointer
     width: 33%
     max-width: 190px
 
@@ -161,13 +162,25 @@
     .is-mobile &
       opacity: 1
 
+    &:hover
+      .patients__label,
+      .patients__text
+        color: $grey
+
+      .patients__icon
+        fill: $grey
+        stroke: $grey
+
   &__icon
     @include phone
       width: rem-calc(45)
       height: rem-calc(45)
+    transition: all .2s ease 
     margin: 0 auto
     width: rem-calc(75)
     height: rem-calc(75)
+    fill: $hero-white
+    stroke: $hero-white
 
     @media screen and (max-height: 620px)
       width: rem-calc(45)
@@ -176,3 +189,7 @@
   &__label
     margin: 1.5rem 0 rem-calc(14)
     font-weight: bold
+
+  &__label,
+  &__text
+    transition: color .2s ease
