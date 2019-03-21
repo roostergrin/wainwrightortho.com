@@ -5,6 +5,9 @@ export default {
   methods: {
     toggleMenu () {
       this.$store.state.nav ? this.$store.dispatch('VIEW_NAV', false) : this.$store.dispatch('VIEW_NAV', true)
+    },
+    openModal () {
+      this.$store.dispatch('VIEW_SHOWMODAL', true)
     }
   }
 }

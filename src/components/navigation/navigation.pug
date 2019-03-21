@@ -5,6 +5,6 @@
       span
       span
       span
-    .navigation__appt-btn 
+    .navigation__appt-btn(@click='openModal') 
       span(v-if='!$store.state.mobile') Schedule A Complimentary Consultation
       span(v-if='$store.state.mobile') Free Consultation
