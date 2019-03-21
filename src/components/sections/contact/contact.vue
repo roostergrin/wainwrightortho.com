@@ -35,13 +35,14 @@ export default {
         map.transform.zoom = 8
       }
 
-      this.props.features.forEach((marker) => {
+      this.props.features.forEach((marker, index) => {
         let coords = []
         coords.push(+marker.coordinates.lng, +marker.coordinates.lat)
 
         let el = document.createElement('div')
         el.className='contact__marker'
         el.style.backgroundImage ='url(https://d22y7cgfo0b8n4.cloudfront.net/contact/Location.svg)'
+        el.style.animationDelay = index * .15 + 's'
 
         var popupOffsets = {
          'bottom': [90, 96],
@@ -69,6 +70,14 @@ export default {
     },
     closeForm () {
       this.formActive = false
+    },
+    handleHover (i) {
+      let marker = document.getElementsByClassName('contact__marker')
+      marker[i].classList.add('contact__marker--hover')
+    },
+    handleLeave (i) {
+      let marker = document.getElementsByClassName('contact__marker')
+      marker[i].classList.remove('contact__marker--hover')
     }
   }
 }
