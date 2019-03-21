@@ -20,7 +20,7 @@
     height: 100% !important
 
   &__marker
-    transition: height .2s ease, width .2s ease
+    transition: height .3s ease, width .3s ease
     opacity: 0
     z-index: 3
     background-repeat: no-repeat
@@ -30,11 +30,11 @@
     height: 5.9rem
 
     &--hover
-      width: 2.5rem
-      height: 7.5rem
+      width: 2.2rem
+      height: 6.5rem
 
     .marker &
-      animation: marker .55s ease forwards
+      animation: marker .6s ease forwards
 
       @keyframes marker
         0%
@@ -232,6 +232,8 @@
     @media screen and (max-width: $screen-xs)
       width: 128px
 
+  &__city
+    font-weight: bold
 
   &__popup
     a

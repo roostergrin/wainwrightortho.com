@@ -16,6 +16,9 @@ export default {
   computed: {
     props () {
       return this.$store.state.pages.contact
+    },
+    locations () {
+      return this.$store.state.app.app
     }
   },
   async mounted () {
@@ -42,7 +45,7 @@ export default {
         let el = document.createElement('div')
         el.className='contact__marker'
         el.style.backgroundImage ='url(https://d22y7cgfo0b8n4.cloudfront.net/contact/Location.svg)'
-        el.style.animationDelay = index * .15 + 's'
+        el.style.animationDelay = index * .2 + 's'
 
         var popupOffsets = {
          'bottom': [90, 96],

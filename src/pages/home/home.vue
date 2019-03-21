@@ -49,7 +49,7 @@ export default {
       if (destination.index === 5) {
         setTimeout(() => { destination.item.classList.add('marker') }, 350)
       } else {
-          setTimeout(() => { origin.item.classList.remove('marker') }, 400)
+        setTimeout(() => { origin.item.classList.remove('marker') }, 400)
       }
     }
   }

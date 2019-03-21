@@ -13,12 +13,18 @@
   .contact__lower
     .contact__container
       .contact__left
-        .contact__location(v-for='location, i in props.features', :key='i' v-if='i <= 1' v-html='location.popup' @mouseenter='handleHover(i)' @mouseleave='handleLeave(i)')
+        .contact__location(v-for='location, i in locations.locations', :key='i' v-if='i <= 1' @mouseenter='handleHover(i)' @mouseleave='handleLeave(i)')
+          .contact__city(v-html='location.city')
+          a.contact__address(:href='location.location_href' v-html='location.address' target='_blank' rel='noopener noreferrer')
+          a.contact__phone(:href='location.phone_href' v-html='location.phone' target='_blank' rel='noopener noreferrer')  
       .contact__middle
         Icon.contact__logo(name='Logo')
         .contact__social
           a.contact__link(v-for='link, j in props.social', :key='j', :href='link.href' target='_blank' rel='noopener noreferrer')
             Icon.contact__link-icon(:name='link.icon')  
       .contact__right
-        .contact__location(v-for='location, k in props.features', :key='k' v-if='k > 1' v-html='location.popup' @mouseenter='handleHover(k)' @mouseleave='handleLeave(k)')
+        .contact__location(v-for='location, k in locations.locations', :key='k' v-if='k > 1' @mouseenter='handleHover(k)' @mouseleave='handleLeave(k)')
+          .contact__city(v-html='location.city')
+          a.contact__address(:href='location.location_href' v-html='location.address' target='_blank' rel='noopener noreferrer')
+          a.contact__phone(:href='location.phone_href' v-html='location.phone' target='_blank' rel='noopener noreferrer')
       .contact__language    
