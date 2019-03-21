@@ -166,14 +166,21 @@
     align-items: center
     justify-content: center
     transition: color .2s ease
+    cursor: pointer
     width: 100%
+    overflow: hidden
 
     &:hover,
     &--selected
       color: $white
 
+    &:hover
+      .team__bg
+        transform: scale(1.1)
+
   &__bg
     @extend .image
+    transition: transform .5s ease
 
   &__city
     @extend h1
