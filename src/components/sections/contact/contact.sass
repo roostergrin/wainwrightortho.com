@@ -94,7 +94,8 @@
       max-width: 612px
       height: 380px
 
-    .active &
+    .active &,
+    .is-mobile &
       animation: slide-out .35s ease .35s forwards
       opacity: 0
 
@@ -219,8 +220,8 @@
     &:nth-child(odd)
       @include tablet
         margin-right: rem-calc(12)
-      // @include phone
-      //   margin-right: 0
+      @include phone
+        margin-bottom: 10px
       margin-right: 1.5rem
 
     &:hover
@@ -234,11 +235,6 @@
 
   &__city
     font-weight: bold
-
-  &__popup
-    a
-      .contact__location &
-        display: none
 
   &__logo
     width: rem-calc(180)
