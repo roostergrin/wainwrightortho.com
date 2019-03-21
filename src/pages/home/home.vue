@@ -46,6 +46,11 @@ export default {
       } else {
         origin.item.classList.remove('sliding')
       }
+      if (destination.index === 5) {
+        setTimeout(() => { destination.item.classList.add('marker') }, 350)
+      } else {
+          setTimeout(() => { origin.item.classList.remove('marker') }, 400)
+      }
     }
   }
 }

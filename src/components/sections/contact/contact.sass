@@ -20,12 +20,27 @@
     height: 100% !important
 
   &__marker
+    transition: height .2s ease, width .2s ease
+    opacity: 0
     z-index: 3
     background-repeat: no-repeat
     background-position: top
     cursor: pointer
     width: 2rem
     height: 5.9rem
+
+    &--hover
+      width: 2.5rem
+      height: 7.5rem
+
+    .marker &
+      animation: marker .55s ease forwards
+
+      @keyframes marker
+        0%
+          opacity: 0
+        100%
+          opacity: 1
 
   .mapboxgl-popup
     z-index: 3
@@ -197,6 +212,8 @@
     justify-content: flex-end
 
   &__location
+    transition: color .2s ease
+    cursor: pointer
     font-size: 14px
 
     &:nth-child(odd)
@@ -205,6 +222,9 @@
       // @include phone
       //   margin-right: 0
       margin-right: 1.5rem
+
+    &:hover
+      color: $white
 
     @media screen and (max-width: $screen-sm)
       font-size: 12px
