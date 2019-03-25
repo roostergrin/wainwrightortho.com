@@ -102,6 +102,9 @@
             margin-right: -1rem
             height: calc(100vw * .586)
 
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+          width: 84.5%    
+
       // Back Row - team member adjustment
       &:nth-child(2)
         .team__member
@@ -124,15 +127,12 @@
       @media screen and (max-width: 400px) and (min-height: 700px)
         bottom: 180px !important
 
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-        width: 84.5%
-
     @media screen and (max-width: 767px)
       bottom: 180px
       margin-left: -.5rem
 
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-      width: 100%    
+      width: 100%
 
   &__member
     @include desktop-lg

@@ -42,7 +42,7 @@
     top: 55%
     left: 0
     transform: translateY(100%)
-    transition: transform .4s cubic-bezier(.39, .575, .28, .995) .45s
+    transition: transform .4s cubic-bezier(.39, .575, .28, .995) .45s, opacity .2s ease
     background: rgba($deep-grey, .57)
     width: 100%
     height: 45%
@@ -50,6 +50,12 @@
     .active &,
     .is-mobile &
       transform: translateY(0)
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+        opacity: 1
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+      opacity: 0
 
   &__container
     @extend .container
