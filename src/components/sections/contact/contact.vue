@@ -37,6 +37,9 @@ export default {
       if (this.windowWidth < 1024) {
         map.transform.zoom = 8
       }
+      if (this.windowWidth > 1750) {
+        map.transform.zoom = 10
+      }
 
       this.props.features.forEach((marker, index) => {
         let coords = []
