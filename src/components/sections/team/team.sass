@@ -56,36 +56,61 @@
     transform: translateX(-50%)
     margin-left: -1rem
 
+    // Team Members - adjust placement
+    // Note - below is terrible - don't ever do this.
     &--leclaire
       margin-left: 1rem
+      // First Row
       &:first-child
+        @include desktop-lg
+          width: 85.5%
         @include phone
           width: 81.5%
         width: 71.5%
+
         .team__member
           height: 400px
+
           &:nth-child(2)
-            margin-left: -.8rem
+            margin-left: -.5rem
+            @media screen and (min-width: 1750px)
+              margin-left: .05rem
             @media screen and (max-width: 767px)
               margin-left: -.2rem
+
+          // Dr. Wainwright
           &:nth-child(3)
             margin-left: -1.4rem
+            @media screen and (min-width: 1750px)
+              margin-left: -1.2rem
             @media screen and (max-width: 767px)
               margin-left: -1.1rem
             @media screen and (max-width: 400px)
               margin-left: -.6rem
+
           &:nth-child(4)
-            margin-left: -1.3rem
+            margin-left: -1rem
+            @media screen and (min-width: 1750px)
+              margin-left: -1.5rem
             @media screen and (max-width: 767px)
               margin-left: -1.1rem
+
+          @media screen and (min-width: 1750px)
+            height: 460px
+
           @media screen and (max-width: 767px)
             margin-right: -1rem
             height: calc(100vw * .586)
 
+      // Back Row - team member adjustment
       &:nth-child(2)
         .team__member
           // &:nth-child(4)
-          //   margin-left: 2px
+          //   @media screen and (min-width: 1750px)
+          //     margin-left: .3rem
+          // &:nth-child(5)
+          //   @media screen and (min-width: 1750px)
+          //     margin-left: -.5rem
           &:last-child
             visibility: hidden
 
@@ -99,15 +124,23 @@
       @media screen and (max-width: 400px) and (min-height: 700px)
         bottom: 180px !important
 
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+        width: 84.5%
+
     @media screen and (max-width: 767px)
       bottom: 180px
       margin-left: -.5rem
 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+      width: 100%    
+
   &__member
+    @include desktop-lg
+      height: 500px
     // position: absolute
     transition: filter .2s ease
     // margin: auto -1.6rem
-    margin-right: -1.9rem
+    margin-right: -2.1rem
     cursor: pointer
     width: auto
     height: 450px
@@ -117,6 +150,8 @@
       filter: none
 
     .team__row--rear &
+      @include desktop-lg
+        height: 576px
       // display: none
       margin-right: -.5rem
       // margin-left: -1rem
