@@ -11,6 +11,9 @@
   &-leave-to
     opacity: 0
 
+    @media screen and (max-width: 480px)
+      opacity: 1
+
 
 .crossfade
   backface-visibility: hidden
@@ -19,12 +22,12 @@
     transition-property: opacity
     transition-duration: .35s
     transition-timing-function: ease-in
+    transition-delay: .7s
 
   &-leave-active
     transition-property: opacity
     transition-duration: .25s
     transition-timing-function: ease-in
-    transition-delay: .1s
 
   &-enter,
   &-leave-to

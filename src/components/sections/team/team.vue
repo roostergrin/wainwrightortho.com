@@ -17,6 +17,8 @@ export default {
   methods: {
     toggleLocation (i) {
       this.selectedLocation = i
+      this.activeMember = 0
+      this.activeRow = 0
     },
     handleHover (i, k) {
       this.activeMember = i
