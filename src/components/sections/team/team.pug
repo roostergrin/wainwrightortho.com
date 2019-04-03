@@ -3,7 +3,7 @@
     .team__upper
       .team__title(v-html='props.title')
       .team__container(v-for='team, i in props.teams' v-if='i === selectedLocation', :key='i')
-        .team__row(v-for='row, k in team.row', :key='k', :style="{ zIndex: (k * -1) + 9 }", :class="{'team__row--front': k === 0, 'team__row--rear': k === 1, 'team__row--leclaire': i === 0 }  ")
+        .team__row(v-for='row, k in team.row', :key='k', :style="{ zIndex: (k * -1) + 9 }", :class="{'team__row--front': k === 0, 'team__row--rear': k === 1, 'team__row--leclaire': i === 0 || 2 || 3 }  ")
           img.team__member(v-for='member, l in row.members', :key='l' @mouseover='handleHover(l, k)', :class="{ 'team__member--active': activeMember === l && activeRow === k }", :src='member.member', :style="{ zIndex: l <= (Math.floor(row.members.length / 2)) ? l + 1 : row.members.length - l }")
         .team__content-row(v-for='item, n in team.content_row', :key='n + 2')
           transition-group(name='fade' tag='div')
