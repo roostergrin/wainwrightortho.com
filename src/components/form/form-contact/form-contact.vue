@@ -10,6 +10,7 @@ export default {
       phone: '',
       email: '',
       message: '',
+      location: '',
       postUrl: api + '/rg-mail/v1/contact',
       formSubmitted: false,
       formSuccess: false
@@ -31,7 +32,8 @@ export default {
         fullname: this.fullname,
         phone: this.phone,
         email: this.email,
-        message: this.message
+        message: this.message,
+        location: this.location
       })
         .then(res => {
           this.active = ''

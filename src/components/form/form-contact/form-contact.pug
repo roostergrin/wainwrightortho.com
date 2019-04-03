@@ -25,12 +25,24 @@
           input.form-contact__input(name='phone', v-model='phone', v-validate="'required'", :class="{ 'input': true, 'form-contact__input--error': errors.has('phone') }", placeholder='(555) 555-555')
           .form-contact__message
             span(v-show="errors.has('phone')") Please Input a Valid Phone Number
+            
+        .form-contact__group
+          label.sr-only Location
+          select.form-contact__input--select(name='location' v-model='location' v-validate="'required'", :class="{ 'input': true, 'form-contact__input--error': errors.has('location') }")      
+            option(value='' disabled hidden) Select Location
+            option(value='LeClaire') LeClaire
+            option(value='Bettendorf') Bettendorf
+            option(value='Moline') Moline
+            option(value='Sterling') Sterling
+          Icon.form-contact__arrow(name='ArrowLft') 
+          .form-contact__message
+            span(v-show="errors.has('phone')") Please Select a Location  
     
       .form-contact__col   
       
         .form-contact__group
           label.form-contact__label Message
-          textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' rows='6')
+          textarea.form-contact__input.form-contact__input--textarea(name='message', v-model='message' rows='8')
         
     .form-contact__button-group
       button.form-contact__submit-button(@click='validate', type='submit', :disabled='formSubmitted' role='button')
