@@ -1,10 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '@/pages/home/home'
-
-import Styleguide from '@/pages/styleguide/styleguide'
-import scrollBehavior from '@/shared/functionality/scroll-behavior'
+const Home = () => import('@/pages/home/home')
 
 Vue.use(VueRouter)
 
@@ -18,18 +15,11 @@ const router = new VueRouter({
       component: Home
     },
     {
-      path: '/styleguide',
-      name: 'Styleguide',
-      navigation: false,
-      component: Styleguide
-    },
-    {
       path: '/*',
       navigation: false,
       component: Home
     }
-  ],
-  scrollBehavior
+  ]
 })
 
 export default router

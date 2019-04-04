@@ -64,6 +64,8 @@
       &:first-child
         @include desktop-lg
           width: 85.5%
+          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+            width: 86.5%
         @include phone
           width: 81.5%
         width: 71.5%
@@ -92,6 +94,8 @@
             margin-left: -1rem
             @media screen and (min-width: 1750px)
               margin-left: -1.5rem
+              @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+                margin-left: -1.85rem
             @media screen and (max-width: 767px)
               margin-left: -1.1rem
 
@@ -103,7 +107,7 @@
             height: calc(100vw * .586)
 
         @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
-          width: 84.5%    
+          width: 84.5%
 
       // Back Row - team member adjustment
       &:nth-child(2)

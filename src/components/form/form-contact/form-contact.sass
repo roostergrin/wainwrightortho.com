@@ -65,6 +65,9 @@
     fill: $hero-white
     pointer-events: none
 
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+      display: none
+
   &__button-group
     margin-top: rem-calc(12)
     text-align: right
