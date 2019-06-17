@@ -5,6 +5,9 @@
       span
       span
       span
-    .navigation__appt-btn(@click='openModal') 
-      span(v-if='!$store.state.mobile') Schedule A Complimentary Consultation
-      span(v-if='$store.state.mobile') Free Consultation
+    .navigation__buttons
+      .navigation__appt-btn(@click='openModal')
+        span(v-if='!$store.state.mobile') Schedule A Complimentary Consultation
+        span(v-if='$store.state.mobile') Free Consultation
+      a.navigation__appt-btn(v-if='!$store.state.mobile', href='https://patient-portal-prd-cluster-2.sesamecommunications.com/tmoss1/index.html', target='_blank')
+        span Patient Login

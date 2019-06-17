@@ -4,6 +4,7 @@
     .menu__col.menu__col--left
       .menu__links
         .menu__link(v-for='link, i in props.links', :key='i' @click='handleRoute(i)' v-html='link.link')
+        a.menu__link(v-if='$store.state.mobile', href='https://patient-portal-prd-cluster-2.sesamecommunications.com/tmoss1/index.html', target='_blank') Patient Login
     .menu__col.menu__col--right
       .menu__content
         .menu__location(v-for='location, i in props.locations', :key='i')

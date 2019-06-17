@@ -16,9 +16,13 @@
   &__hamburger
     @include hamburger-basic($hero-white, .25s, 2rem, 1.15rem)
 
+  &__buttons
+    display: flex
+
   &__appt-btn
     @extend h3
     transition: all .2s ease
+    margin: 0 12px
     border: 2px solid $hero-white
     border-radius: 8px
     cursor: pointer
@@ -32,3 +36,6 @@
 
     .is-mobile &
       background: rgba($hero-white, .28)
+
+    &:last-child
+      margin-right: 0
