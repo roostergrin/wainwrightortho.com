@@ -8,13 +8,13 @@ import Team from 'section/team/team'
 import Treatments from 'section/treatments/treatments'
 import Welcome from 'section/welcome/welcome'
 
-import config from '../../config'
+// import config from '../../config'
 
 export default {
   data () {
     return {
       fullpageOptions: {
-        licenseKey: config.fullpage.KEY,
+        // licenseKey: config.fullpage.KEY,
         // anchors: ['hero-section', 'welcome-section'],
         easingcss3: 'cubic-bezier(.52, .01, .16, 1)',
         // responsiveHeight: 600,
