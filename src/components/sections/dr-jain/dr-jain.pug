@@ -1,0 +1,7 @@
+.dr-jain
+  .dr-jain__image(:style="{ backgroundImage: 'url(' + props.image + ')' }")
+    img.sr-only(:src='props.image', :alt='props.name')
+  .dr-jain__container
+    .dr-jain__col
+      .dr-jain__name(v-html='props.name')
+      .dr-jain__bio(v-html='props.bio')    

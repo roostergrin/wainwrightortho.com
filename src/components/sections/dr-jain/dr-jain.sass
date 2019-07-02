@@ -1,0 +1,43 @@
+.dr-jain
+  @include ipad-pro
+    padding: rem-calc(80) 0
+  @include tablet
+    padding: 2rem 0
+  position: relative
+  background-color: $slate-blue
+  height: 100%
+
+  &__container
+    @extend .container
+    align-items: center
+    height: 100%
+
+  &__image
+    @extend .image
+    @extend .image--animation
+    @include tablet
+      position: relative
+      margin: 0 auto
+      max-width: 250px
+      height: 250px
+    @include phone
+      max-width: 82%
+    background-position: top
+    max-width: 44%
+
+  &__col
+    @extend .col-6
+    @extend .col-6--offset
+
+  &__name
+    @extend h1
+    @extend .text-fade-in
+    @include phone
+      margin-top: rem-calc(10)
+      line-height: 1.25
+    margin-bottom: 2rem
+    transition-delay: .5s
+
+  &__bio
+    @extend .text-fade-in
+    transition-delay: .65s
