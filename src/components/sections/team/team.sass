@@ -245,3 +245,24 @@
     @include phone
       font-size: 14px
     z-index: 1
+
+  &__dir-btn
+    @extend h3
+    transition: all .2s ease
+    margin: 10vh 12px
+    border: 2px solid $hero-white
+    border-radius: 8px
+    cursor: pointer
+    padding: .35rem 1rem
+    width: 30%
+    text-align: center
+    display: inline-block
+    position: absolute
+    right: 0
+    z-index: 2
+
+    &:hover
+      transform: translateY(-1px)
+      box-shadow: $shadow-btn
+      background-color: $hero-white
+      color: $slate-blue
