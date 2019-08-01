@@ -10,7 +10,7 @@
             .team__content(v-for='content, m in item.content', v-if='m === activeMember && n === activeRow', :key="'member'+m", :class="{ 'team__content--left': m < Math.floor(team.row[0].members.length / 2), 'team__content--right': m > Math.floor(team.row[0].members.length / 2), 'team__content--center': m === Math.floor(team.row[0].members.length / 2), 'team__content--hide': content.name === 'Dr. Wainwright' }")
               .team__name(v-html='content.name')
               .team__bio(v-html='content.bio')
-        a.team__dir-btn(href='https://wainwrightortho.com/wp-content/uploads/2019/07/Website-Employee-Directory-3.pdf' target="_blank")
+        a.team__dir-btn(href='https://wainwrightortho.com/wp-content/uploads/2019/08/Website-Employee-Directory-3.pdf' target="_blank")
           span(v-if='!$store.state.mobile') Employee Directory
 
     .team__lower
