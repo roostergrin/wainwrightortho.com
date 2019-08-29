@@ -6,6 +6,10 @@
       span
       span
     .navigation__buttons
+      a.navigation__appt-btn(v-if='!$store.state.mobile', href="https://localsloveus.com/vote/213270/", target='_blank')
+        span Vote here!
+      a.navigation__appt-btn(v-if='$store.state.mobile', href="https://localsloveus.com/vote/213270/", target='_blank')
+        span Vote!
       .navigation__appt-btn(@click='openModal')
         span(v-if='!$store.state.mobile') Schedule A Complimentary Consultation
         span(v-if='$store.state.mobile') Free Consultation
