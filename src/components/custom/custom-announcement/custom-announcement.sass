@@ -1,0 +1,40 @@
+.custom-announcement
+  position: absolute
+  top: 35%
+  left: -50%
+  right: -50%
+  z-index: 9999
+  margin: 0 auto
+  background: $dark-grey
+  font-family: $montserrat
+  width: 50%
+  
+  @include tablet
+    width: 90%
+
+  &__announcement
+    @extend .container-large
+    
+    align-items: center
+    justify-content: space-between
+    padding-top: 3rem
+    padding-bottom: 2rem
+    display: block
+    text-shadow: 1px 1px black
+    line-height: 1.75rem
+
+    h3
+      font-weight: 600
+      margin-bottom: .5em
+  
+  &__close-button
+      position: absolute
+      display: block
+      padding: .25rem
+      top: 1rem
+      right: 1rem
+      z-index: 9999
+      cursor: pointer
+  
+.close
+    display: none
