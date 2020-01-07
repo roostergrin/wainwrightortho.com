@@ -1,9 +1,7 @@
 #app(:class="{ 'is-mobile': $store.state.mobile }") 
-  Announcement
   Navigation
   router-view
   transition(name='fade')
     Menu(v-if='$store.state.nav')
   transition(name='fade')
-    Modal(v-if='$store.state.showModal')    
-  
+    Modal(v-if='$store.state.showModal')     

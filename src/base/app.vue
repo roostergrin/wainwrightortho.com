@@ -4,7 +4,6 @@
 import Menu from 'components/menu/menu'
 import Modal from 'components/modal/modal'
 import Navigation from 'components/navigation/navigation'
-import Announcement from 'components/custom/custom-announcement/custom-announcement'
 
 export default {
   async created () {
@@ -24,8 +23,7 @@ export default {
   components: {
     Menu,
     Modal,
-    Navigation,
-    Announcement
+    Navigation
   }
 }
 </script>
