@@ -8,6 +8,7 @@ import Team from 'section/team/team'
 import Treatments from 'section/treatments/treatments'
 import Welcome from 'section/welcome/welcome'
 import DrJain from 'section/dr-jain/dr-jain'
+import Announcement from 'components/custom/custom-announcement/custom-announcement'
 
 // import config from '../../config'
 
@@ -39,7 +40,8 @@ export default {
     Team,
     Treatments,
     Welcome,
-    DrJain
+    DrJain,
+    Announcement
   },
   methods: {
     onLeave (origin, destination, direction) {
