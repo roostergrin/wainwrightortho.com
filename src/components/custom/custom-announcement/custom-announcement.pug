@@ -1,4 +1,6 @@
 .custom-announcement( v-bind:class="{ close: !isShowing }" )
-  .custom-announcement__close-button( @click='closeModal' ) X
-  .custom-announcement__announcement
-    p Due to the Covid-19 pandemic, Wainwright Orthodontics is closing both it’s Quad Cities and Sterling offices through March 31st, 2020. Based on the recommendation of the Illinois State Dental Society, and our conviction that we should participate in the nationwide social distancing efforts at this important time, all patient appointments will automatically be cancelled from today until March 31st, 2020. You will be contacted to reschedule once accommodations are made. Emergency appointments in which patients are experiencing pain, will be made by calling our QC office at 563-355-1034 or our Sterling office at 815-625-3504. More information will follow.<br><br>We appreciate you understanding our decision to temporarily close our offices for the health and safety of our patients and staff.
+  .custom-announcement__container
+    .custom-announcement__close-button( @click='closeModal' ) X
+    .custom-announcement__announcement
+      h3(v-if='props.subject !== ""' v-html='props.subject')
+      p(v-html='props.body')

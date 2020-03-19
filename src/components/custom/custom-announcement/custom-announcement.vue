@@ -11,6 +11,11 @@ export default {
     closeModal () {
       this.isShowing = false
     }
+  },
+  computed: {
+    props () {
+      return this.$store.state.pages.home
+    }
   }
 }
 </script>

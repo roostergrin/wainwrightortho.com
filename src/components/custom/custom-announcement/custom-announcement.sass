@@ -1,16 +1,32 @@
 .custom-announcement
-  position: absolute
-  top: 10%
+  position: fixed
+  top: 0
   left: 0
   right: 0
-  z-index: 9999
+  z-index: 10000
   margin: auto
-  background: $dark-grey
-  font-family: $montserrat
-  width: 50%
-  
-  @include tablet
-    width: 90%
+  overflow: auto
+  background: rgba(0,0,0,.5)
+  width: 100vw
+  height: 100vh
+
+  &__container
+    position: absolute
+    top: 10%
+    left: 0
+    right: 0
+    z-index: 9999
+    margin: auto
+    background: $dark-grey
+    font-family: $montserrat
+    max-width: 900px
+    width: 70%
+    padding: 1rem 1rem 2rem
+    margin-bottom: 3rem
+
+    @include tablet
+      width: 90%
+      padding: .5rem .5rem 1rem
 
   &__announcement
     @extend .container-large
@@ -18,7 +34,6 @@
     align-items: center
     justify-content: space-between
     padding-top: 3rem
-    padding-bottom: 2rem
     display: block
     text-shadow: 1px 1px black
     line-height: 1.75rem
@@ -35,6 +50,6 @@
       right: 1rem
       z-index: 9999
       cursor: pointer
-  
+    
 .close
     display: none
