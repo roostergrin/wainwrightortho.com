@@ -43,9 +43,15 @@
       margin-bottom: .5em
 
     video
-      width: 100%
-      height: auto
-      margin-top: 2rem
+      width: auto
+      height: 600px
+      display: block
+      margin: 2rem auto
+
+      @include phone
+        width: 85%
+        height: auto
+
   
   &__close-button
       position: absolute
