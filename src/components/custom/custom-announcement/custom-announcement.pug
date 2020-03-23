@@ -4,3 +4,6 @@
     .custom-announcement__announcement
       h3(v-if='props.subject !== ""' v-html='props.subject')
       p(v-html='props.body')
+      video(v-if='props.video !== ""' controls)
+        source(:src='props.video' type='video/mp4')
+        | Your browser does not support video.
