@@ -1,6 +1,7 @@
 .form-contact
   .form-contact__thank-you(v-if='formSuccess')
     h1 Thank You!
+    .form-contact__instructions Thank you for your message, we will get back to you shortly. 
     
   form.form-contact__form(@submit.prevent='validate', method='post', v-if='!formSuccess')
     .form-contact__instructions No dental referral is needed to schedule your free consultation.
