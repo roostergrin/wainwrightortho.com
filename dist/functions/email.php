@@ -15,7 +15,7 @@ function rg_serve_route () {
 
   $data = json_decode(file_get_contents("php://input"), true);
   $from = 'info@wordpress.com';
-  $to = 'wocustomerservice@wainwrightortho.com';
+  $to = 'anami@roostergrin.com';
   $subject = 'Website Email / ' . $data['fullname'] . ' - ' . $data['location'];
   $headers = array('Content-Type: text/html; charset=UTF-8');
   $message = '<html><body>';
