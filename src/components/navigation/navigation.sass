@@ -6,6 +6,9 @@
 
   &__navbar
     @extend .container-large
+    @include tablet
+      flex-direction: column
+      align-items: flex-start
     @include phone
       padding-top: 1rem
       display: block
@@ -18,12 +21,28 @@
     @include hamburger-basic($hero-white, .25s, 2rem, 1.15rem)
     @include phone
       margin-bottom: 2rem
+    margin-right: 1rem
 
   &__buttons
+    @include phone
+      flex-wrap: wrap
+      width: 100%
     display: flex
 
   &__appt-btn
     @extend h3
+    @include tablet
+      margin: 1rem 1rem 0 0
+    @include phone
+      display: flex
+      align-items: center
+      justify-content: center
+      margin: 0 0 1rem
+      padding: .35rem
+      width: 100%
+      font-size: 14px
+      &:last-child
+        margin: 0
     transition: all .2s ease
     margin: 0 12px 0 0 
     border: 2px solid $hero-white
@@ -31,13 +50,6 @@
     cursor: pointer
     padding: .35rem 1rem
     text-align: center
-    @include phone
-      width: 100%
-      font-size: 14px
-      padding: .35rem
-      align-items: center
-      justify-content: center
-      display: flex
 
     &:hover
       transform: translateY(-1px)
