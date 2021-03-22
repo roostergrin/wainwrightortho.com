@@ -15,6 +15,9 @@ export default {
       fullpage_api.moveTo(+section)
       /* eslint-enable */
       this.$store.dispatch('VIEW_NAV', false)
+    },
+    toggleMenu () {
+      this.$store.state.nav ? this.$store.dispatch('VIEW_NAV', false) : this.$store.dispatch('VIEW_NAV', true)
     }
   }
 }
