@@ -6,6 +6,14 @@ export default {
     props () {
       return this.$store.state.pages.hero
     }
+  },
+  methods: {
+    video () {
+      this.$refs.video.playbackRate = 0.5 // Adjust this decimal int for playback speed
+    }
+  },
+  mounted () {
+    this.video()
   }
 }
 </script>

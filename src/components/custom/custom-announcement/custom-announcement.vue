@@ -4,7 +4,7 @@
 export default {
   data: () => {
     return {
-      isShowing: true
+      isShowing: false
     }
   },
   methods: {
