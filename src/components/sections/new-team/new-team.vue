@@ -11,7 +11,7 @@ export default {
   },
   computed: {
     props () {
-      return this.$store.state.pages.newteam
+      return this.$store.state.pages['new-team']
     }
   },
   methods: {

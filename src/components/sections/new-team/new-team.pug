@@ -2,16 +2,18 @@
   .new-team__wrapper
     .new-team__upper
       .new-team__title(v-html='props.title')
-      //- .new-team__container(v-for='team, i in props.teams' v-if='i === selectedLocation', :key='i')
-      //-   .new-team__row(v-for='row, k in team.row', :key='k', :style="{ zIndex: (k * -1) + 9 }", :class="{'new-team__row--front': k === 0, 'new-team__row--rear': k === 1, 'new-team__row--leclaire': i === 0 || 2 || 3 }  ")
-      //-     img.team__member(v-for='member, l in row.members', :key='l' @mouseover='handleHover(l, k)', :class="{ 'new-team__member--active': activeMember === l && activeRow === k }", :src='member.member', :style="{ zIndex: l <= (Math.floor(row.members.length / 2)) ? l + 1 : row.members.length - l }")
-      //-   .new-team__content-row(v-for='item, n in team.content_row', :key='n + 2')
-      //-     transition-group(name='fade' tag='div')
-      //-       .new-team__content(v-for='content, m in item.content', v-if='m === activeMember && n === activeRow', :key="'member'+m", :class="{ 'team__content--left': m < Math.floor(team.row[0].members.length / 2), 'new-team__content--right': m > Math.floor(team.row[0].members.length / 2), 'new-team__content--center': m === Math.floor(team.row[0].members.length / 2), 'new-team__content--hide': content.name === 'Dr. Wainwright' }")
-      //-         .new-team__name(v-html='content.name')
-      //-         .new-team__bio(v-html='content.bio')
-      //-   a.new-team__dir-btn(href='https://wainwrightortho.com/wp-content/uploads/2020/03/Website-Employee-Directory-4.pdf' target="_blank")
-      //-     span(v-if='!$store.state.mobile') Employee Directory
+      .new-team__container(v-for='(location, i) in props.new_team.location' v-if='i === selectedLocation', :key='`location--${i}`')
+        .new-team__members
+          .new-team__members--wrapper
+            .new-team__member(v-for='(member, j) in location.members', :key='`member--${j}`')
+              img(:src='member.img.src')
+              .new-team__member--content
+                .new-team__member--name(v-html='`${member.name}`')
+                .new-team__member--role(v-html='member.role')
+                //- .new-team__member--bio(v-html='member.bio')
+
+        a.new-team__dir-btn(href='https://wainwrightortho.com/wp-content/uploads/2020/03/Website-Employee-Directory-4.pdf' target="_blank")
+          span(v-if='!$store.state.mobile') Employee Directory
 
     .new-team__lower
       .new-team__location(v-for='location, j in props.locations' @click='toggleLocation(j)', :key='j', :class="{ 'team__location--selected': selectedLocation === j }")
