@@ -4,7 +4,7 @@
 import Contact from 'section/contact/contact'
 import Hero from 'components/hero/hero'
 import Patients from 'section/patients/patients'
-import Team from 'section/team/team'
+import NewTeam from 'section/new-team/new-team'
 import Treatments from 'section/treatments/treatments'
 import Welcome from 'section/welcome/welcome'
 import DrJain from 'section/dr-jain/dr-jain'
@@ -37,7 +37,7 @@ export default {
     Contact,
     Hero,
     Patients,
-    Team,
+    NewTeam,
     Treatments,
     Welcome,
     DrJain,

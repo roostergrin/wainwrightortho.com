@@ -1,0 +1,268 @@
+.new-team
+  // @include ipad-pro
+  //   height: 65vh
+  // @include tablet
+  //   height: 90vh
+  // @include phone
+  //   height: 75vh
+  height: 100%
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    background: radial-gradient(circle at 50% 55%, rgba($slate-blue, .18), #526f87)
+    height: 100%
+
+  &__upper
+    @include phone
+      height: 85%
+    height: 80%
+    overflow: hidden
+
+  &__lower
+    @include phone
+      height: 15%
+    display: flex
+    justify-content: space-between
+    background: $blue
+    height: 20%
+
+  &__title
+    @extend h1
+    @include desktop-lg
+      left: 15%
+    @include phone
+      top: .5rem
+    position: absolute
+    top: 80px
+    left: 7.5%
+    z-index: 9
+
+    @media screen and (max-height: 716px)
+      display: none
+
+  &__container
+    position: relative
+    margin: 0 auto
+    max-width: 768px
+    height: 100%
+
+  &__row
+    display: flex
+    position: absolute
+    // justify-content: center
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    margin-left: -1rem
+
+    // Team Members - adjust placement
+    // Note - below is terrible - don't ever do this.
+    &--leclaire
+      margin-left: 1rem
+      // First Row
+      &:first-child
+        @include desktop-lg
+          width: 84.5%
+          @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+            width: 86.5% !important
+        @include phone
+          width: 81.5%
+        width: 71.5%
+
+        .new-team__member
+          height: 400px
+
+          &:nth-child(2)
+            margin-left: -.5rem
+            @media screen and (min-width: 1750px)
+              margin-left: .05rem
+            @media screen and (max-width: 767px)
+              margin-left: -.2rem
+
+          // Dr. Wainwright
+          &:nth-child(3)
+            margin-left: -1.4rem
+            @media screen and (min-width: 1750px)
+              margin-left: -1.2rem
+            @media screen and (max-width: 767px)
+              margin-left: -1.1rem
+            @media screen and (max-width: 400px)
+              margin-left: -.6rem
+
+          &:nth-child(4)
+            margin-left: -1rem
+            @media screen and (min-width: 1750px)
+              margin-left: -1.45rem
+              @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+                margin-left: -1.85rem
+            @media screen and (max-width: 767px)
+              margin-left: -1.1rem
+
+          @media screen and (min-width: 1750px)
+            height: 460px
+
+          @media screen and (max-width: 767px)
+            margin-right: -1rem
+            height: calc(100vw * .586)
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+          width: 84.5%
+
+      // Back Row - team member adjustment
+      &:nth-child(2)
+        .new-team__member
+          // &:nth-child(4)
+          //   @media screen and (min-width: 1750px)
+          //     margin-left: .3rem
+          &:nth-child(5)
+            @media screen and (min-width: 1750px)
+              margin-left: -.6rem
+          &:last-child
+            visibility: hidden
+
+      @media screen and (max-height: 716px)
+        bottom: -4.6rem
+
+      @media screen and (max-width: 767px)
+        bottom: 110px !important
+        margin-left: 0 !important
+
+      @media screen and (max-width: 400px) and (min-height: 700px)
+        bottom: 180px !important
+
+    @media screen and (max-width: 767px)
+      bottom: 180px
+      margin-left: -.5rem
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+      width: 100%
+
+  &__member
+    @include desktop-lg
+      height: 500px
+    // position: absolute
+    transition: filter .2s ease
+    // margin: auto -1.6rem
+    margin-right: -2.1rem
+    cursor: pointer
+    width: auto
+    height: 450px
+    filter: grayscale(.85)
+
+    &--active
+      filter: none
+
+    .new-team__row--rear &
+      @include desktop-lg
+        height: 576px
+      // display: none
+      margin-right: -.5rem
+      // margin-left: -1rem
+      height: 500px
+
+      @media screen and (max-width: 767px)
+        height: calc(100vw * .738)
+
+    @media screen and (max-width: 767px)
+      margin-right: -1rem
+      height: calc(100vw * .586)
+
+  &__content
+    position: absolute
+    bottom: 2rem
+    z-index: 99
+    background: rgba($black, .7)
+    padding: 2rem
+    max-width: 475px
+    height: 206px
+    font-size: 16px
+
+    &--left
+      @include tablet
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+      left: -3rem
+
+    &--right
+      @include tablet
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+      right: -3rem
+
+    &--center
+      left: 50%
+      transform: translateX(-50%)
+      width: 100%
+
+    &--hide
+      @include phone
+        display: block
+      display: none
+
+    @media screen and (max-height: 716px)
+      bottom: .5rem
+
+    @media screen and (max-width: 767px)
+      bottom: 0
+      background: $blue
+
+  &__name
+    @extend h1
+    margin-bottom: rem-calc(10)
+    line-height: 1
+
+  &__position
+    font-size: 20px
+
+  &__location
+
+    display: flex
+    position: relative
+    align-items: center
+    justify-content: center
+    transition: color .2s ease
+    cursor: pointer
+    width: 100%
+    overflow: hidden
+
+    &:hover,
+    &--selected
+      color: $white
+
+    &:hover
+      .team__bg
+        transform: scale(1.1)
+
+  &__bg
+    @extend .image
+    transition: transform .5s ease
+
+  &__city
+    @extend h1
+    @include phone
+      font-size: 14px
+    z-index: 1
+
+  &__dir-btn
+    @extend h3
+    transition: all .2s ease
+    margin: 10vh 12px
+    border: 2px solid $hero-white
+    border-radius: 8px
+    cursor: pointer
+    padding: .35rem 1rem
+    width: 30%
+    text-align: center
+    display: inline-block
+    position: absolute
+    right: 0
+    z-index: 2
+
+    &:hover
+      transform: translateY(-1px)
+      box-shadow: $shadow-btn
+      background-color: $hero-white
+      color: $slate-blue
