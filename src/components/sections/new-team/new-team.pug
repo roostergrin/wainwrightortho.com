@@ -10,7 +10,7 @@
               .new-team__member--content
                 .new-team__member--name(v-html='`${member.name}`')
                 .new-team__member--role(v-html='member.role')
-                //- .new-team__member--bio(v-html='member.bio')
+                .new-team__member--bio(v-html='member.bio')
 
         a.new-team__dir-btn(href='https://wainwrightortho.com/wp-content/uploads/2020/03/Website-Employee-Directory-4.pdf' target="_blank")
           span(v-if='!$store.state.mobile') Employee Directory
